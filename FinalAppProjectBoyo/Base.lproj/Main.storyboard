@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdventureStory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,471 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Adventure Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbP-2e-YhR">
+                                <rect key="frame" x="185" y="28" width="231" height="36"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-ItalicMT" family="Times New Roman" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9F-O2-oxr">
+                                <rect key="frame" x="176" y="499" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Fight"/>
+                                <connections>
+                                    <action selector="onFightPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mH1-IL-yY8"/>
+                                    <segue destination="3Mc-2K-3bm" kind="show" id="seB-6t-sww"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="When walking down the street, you come across the once thought extinct flower of legend " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFp-47-hPi">
+                                <rect key="frame" x="136" y="78" width="328" height="241"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve2-hb-tvC">
+                                <rect key="frame" x="343" y="499" width="73" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Flee"/>
+                                <connections>
+                                    <action selector="onFleePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kbj-UP-i16"/>
+                                    <segue destination="3Mc-2K-3bm" kind="show" id="c4Y-t3-tx8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="9AE-az-kri">
+                                <rect key="frame" x="61" y="238" width="496" height="262"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="With USDA Certified Memes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tws-Ew-HNx">
+                                <rect key="frame" x="176" y="87" width="248" height="30"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-ItalicMT" family="Times New Roman" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The choose your own adventure " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXL-VB-yZQ">
+                                <rect key="frame" x="176" y="28" width="248" height="97"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-ItalicMT" family="Times New Roman" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-hl-k7e">
+                                <rect key="frame" x="160" y="116" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="gXL-VB-yZQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="13s-mf-g3n"/>
+                            <constraint firstItem="DFp-47-hPi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FTG-lH-hng"/>
+                            <constraint firstItem="Tws-Ew-HNx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ka1-mI-3kL"/>
+                            <constraint firstItem="9AE-az-kri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L2W-7p-myx"/>
+                            <constraint firstItem="tbP-2e-YhR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N8f-4r-e6d"/>
+                            <constraint firstItem="hCT-hl-k7e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="avn-3j-Nx9"/>
+                            <constraint firstItem="Ve2-hb-tvC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="79.5" id="ryH-h2-Oxc"/>
+                            <constraint firstItem="q9F-O2-oxr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-94.5" id="w3o-Q3-Tv9"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="PcW-Os-E5K" appends="YES" id="RaV-up-puY"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="DFp-47-hPi" id="rqB-vk-hKg"/>
+                        <outlet property="textField" destination="hCT-hl-k7e" id="cpX-bJ-KTa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PcW-Os-E5K">
+                    <connections>
+                        <action selector="onScreenTapped:" destination="BYZ-38-t0r" id="ER7-yk-A9M"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="634" y="287"/>
+        </scene>
+        <!--View Controller1-->
+        <scene sceneID="x4b-cZ-Ymt">
+            <objects>
+                <viewController id="3Mc-2K-3bm" customClass="ViewController1" customModule="AdventureStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LiY-Za-bTp"/>
+                        <viewControllerLayoutGuide type="bottom" id="fOQ-ni-YrZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pA7-8d-WM9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="wer" translatesAutoresizingMaskIntoConstraints="NO" id="Dgf-cd-rU9">
+                                <rect key="frame" x="201" y="225" width="199" height="103"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlZ-lp-ky4">
+                                <rect key="frame" x="366" y="499" width="70" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed2:" destination="3Mc-2K-3bm" eventType="touchUpInside" id="AHl-9g-zjW"/>
+                                    <segue destination="vh4-xj-axT" kind="show" id="7d5-mX-HpH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxk-Kt-4Vv">
+                                <rect key="frame" x="201" y="499" width="65" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed1:" destination="3Mc-2K-3bm" eventType="touchUpInside" id="JJJ-2y-9Uu"/>
+                                    <segue destination="vh4-xj-axT" kind="show" id="hGD-Y8-2UO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-zQ-oQO">
+                                <rect key="frame" x="20" y="20" width="560" height="197"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ucR-zQ-oQO" firstAttribute="centerX" secondItem="pA7-8d-WM9" secondAttribute="centerX" id="EeA-NT-0Dz"/>
+                            <constraint firstItem="WlZ-lp-ky4" firstAttribute="centerX" secondItem="pA7-8d-WM9" secondAttribute="centerX" constant="101" id="Opz-Ld-MCZ"/>
+                            <constraint firstItem="Yxk-Kt-4Vv" firstAttribute="centerX" secondItem="pA7-8d-WM9" secondAttribute="centerX" constant="-66.5" id="Q3S-kJ-3VF"/>
+                            <constraint firstItem="Dgf-cd-rU9" firstAttribute="centerX" secondItem="pA7-8d-WM9" secondAttribute="centerX" id="yLN-v1-JRx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="Yxk-Kt-4Vv" id="BGT-Cm-BJY"/>
+                        <outlet property="button2" destination="WlZ-lp-ky4" id="hrh-KJ-UjE"/>
+                        <outlet property="image" destination="Dgf-cd-rU9" id="EHm-n2-l8M"/>
+                        <outlet property="textLabel" destination="ucR-zQ-oQO" id="7ME-Tp-mzw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RU5-jl-wnM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="288"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="EJp-JA-hUW">
+            <objects>
+                <viewController id="vh4-xj-axT" customClass="ViewController2" customModule="AdventureStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NjR-ou-mRd"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Bh-fx-cf9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vxR-hS-Kit">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sQ-g5-yX9">
+                                <rect key="frame" x="270" y="495" width="61" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <connections>
+                                    <action selector="resetPress:" destination="vh4-xj-axT" eventType="touchUpInside" id="i1s-Ym-7Kg"/>
+                                    <segue destination="6dD-Vh-eJb" kind="show" id="onh-IA-OO7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT2-eD-PBv">
+                                <rect key="frame" x="88" y="20" width="425" height="197"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="wer" translatesAutoresizingMaskIntoConstraints="NO" id="zTA-oj-AaU">
+                                <rect key="frame" x="201" y="209" width="199" height="103"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oP2-Vk-B2c">
+                                <rect key="frame" x="197" y="480" width="65" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onButton2Pressed:" destination="vh4-xj-axT" eventType="touchUpInside" id="Iec-kv-vHT"/>
+                                    <segue destination="WHD-JG-3C8" kind="show" identifier="to3two" id="okB-ir-47W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KY7-eB-KhD">
+                                <rect key="frame" x="339" y="480" width="68" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onButton1Pressed:" destination="vh4-xj-axT" eventType="touchUpInside" id="zCI-qL-kPW"/>
+                                    <segue destination="WHD-JG-3C8" kind="show" identifier="to3one" id="3Gs-hy-q75"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4sQ-g5-yX9" firstAttribute="centerX" secondItem="vxR-hS-Kit" secondAttribute="centerX" id="1ii-N3-rsz"/>
+                            <constraint firstItem="fT2-eD-PBv" firstAttribute="centerX" secondItem="vxR-hS-Kit" secondAttribute="centerX" id="8Sb-ld-Pxh"/>
+                            <constraint firstItem="4sQ-g5-yX9" firstAttribute="centerX" secondItem="vxR-hS-Kit" secondAttribute="centerX" id="KoM-u7-Rb2"/>
+                            <constraint firstItem="zTA-oj-AaU" firstAttribute="centerX" secondItem="vxR-hS-Kit" secondAttribute="centerX" id="P1D-Bd-2D8"/>
+                            <constraint firstItem="4sQ-g5-yX9" firstAttribute="centerX" secondItem="vxR-hS-Kit" secondAttribute="centerX" id="PMu-St-i9g"/>
+                            <constraint firstItem="KY7-eB-KhD" firstAttribute="centerX" secondItem="vxR-hS-Kit" secondAttribute="centerX" constant="73" id="Xea-Fs-u7s"/>
+                            <constraint firstItem="oP2-Vk-B2c" firstAttribute="centerX" secondItem="vxR-hS-Kit" secondAttribute="centerX" constant="-70.5" id="YpQ-5M-PMC"/>
+                            <constraint firstItem="4sQ-g5-yX9" firstAttribute="centerX" secondItem="vxR-hS-Kit" secondAttribute="centerX" id="wT3-zQ-6Dj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="KY7-eB-KhD" id="MCq-6D-vI6"/>
+                        <outlet property="button2" destination="oP2-Vk-B2c" id="PBN-3V-Tjf"/>
+                        <outlet property="image" destination="zTA-oj-AaU" id="OFu-W8-8hA"/>
+                        <outlet property="label" destination="fT2-eD-PBv" id="R7R-Wx-wXQ"/>
+                        <outlet property="resetButton" destination="4sQ-g5-yX9" id="fpU-BL-X2d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtM-I7-jpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837" y="289"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="jrU-N3-9El">
+            <objects>
+                <viewController id="WHD-JG-3C8" customClass="ViewController3" customModule="AdventureStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1IW-gP-A3T"/>
+                        <viewControllerLayoutGuide type="bottom" id="3iN-NF-mMq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ImU-yO-aaI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I4-Af-nAp">
+                                <rect key="frame" x="270" y="503" width="61" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <connections>
+                                    <action selector="resetPressed:" destination="WHD-JG-3C8" eventType="touchUpInside" id="9Zd-oc-IIX"/>
+                                    <segue destination="6dD-Vh-eJb" kind="show" id="84x-z0-Qac"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="parrtor" translatesAutoresizingMaskIntoConstraints="NO" id="ejU-zh-KM1">
+                                <rect key="frame" x="200" y="148" width="200" height="153"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0l-I9-w08">
+                                <rect key="frame" x="200" y="507" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onButton1:" destination="WHD-JG-3C8" eventType="touchUpInside" id="WmK-4S-IhR"/>
+                                    <action selector="onButton1Pressed:" destination="vh4-xj-axT" eventType="touchUpInside" id="Rwd-At-Es3"/>
+                                    <segue destination="Dpf-x9-lnH" kind="show" id="R2K-3T-r69"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY0-ZI-XRq">
+                                <rect key="frame" x="331" y="507" width="69" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onButton2:" destination="WHD-JG-3C8" eventType="touchUpInside" id="BUH-L3-hjd"/>
+                                    <action selector="onButton2Pressed:" destination="vh4-xj-axT" eventType="touchUpInside" id="Ry2-7j-u60"/>
+                                    <segue destination="Dpf-x9-lnH" kind="show" id="05o-0y-JB7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-n3-GA0">
+                                <rect key="frame" x="88" y="0.0" width="425" height="197"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0I4-Af-nAp" firstAttribute="centerX" secondItem="ImU-yO-aaI" secondAttribute="centerX" id="0kg-W0-vUi"/>
+                            <constraint firstItem="nY0-ZI-XRq" firstAttribute="centerX" secondItem="ImU-yO-aaI" secondAttribute="centerX" constant="65.5" id="NMD-v1-PDm"/>
+                            <constraint firstItem="ejU-zh-KM1" firstAttribute="centerX" secondItem="ImU-yO-aaI" secondAttribute="centerX" id="OEZ-hp-mhQ"/>
+                            <constraint firstItem="0I4-Af-nAp" firstAttribute="centerX" secondItem="ImU-yO-aaI" secondAttribute="centerX" id="Qqz-7x-ecN"/>
+                            <constraint firstItem="0I4-Af-nAp" firstAttribute="centerX" secondItem="ImU-yO-aaI" secondAttribute="centerX" id="id8-In-GfS"/>
+                            <constraint firstItem="w0l-I9-w08" firstAttribute="centerX" secondItem="ImU-yO-aaI" secondAttribute="centerX" constant="-65.5" id="mHl-UU-XqR"/>
+                            <constraint firstItem="Xgf-n3-GA0" firstAttribute="centerX" secondItem="ImU-yO-aaI" secondAttribute="centerX" id="mkw-1e-Gby"/>
+                            <constraint firstItem="0I4-Af-nAp" firstAttribute="centerX" secondItem="ImU-yO-aaI" secondAttribute="centerX" id="zto-i2-lsh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="w0l-I9-w08" id="GNz-kI-nxP"/>
+                        <outlet property="button2" destination="nY0-ZI-XRq" id="sjt-LL-ho6"/>
+                        <outlet property="image" destination="ejU-zh-KM1" id="xFn-Kp-2o6"/>
+                        <outlet property="label" destination="Xgf-n3-GA0" id="DPO-H2-SL0"/>
+                        <outlet property="label2" destination="Xgf-n3-GA0" id="aGm-6K-jbG"/>
+                        <outlet property="onButton2" destination="nY0-ZI-XRq" id="aub-FR-qDp"/>
+                        <outlet property="reset" destination="0I4-Af-nAp" id="46h-Yh-EX2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7m-TW-eJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2440" y="289"/>
+        </scene>
+        <!--View Controller4-->
+        <scene sceneID="gxl-YD-Ufy">
+            <objects>
+                <viewController id="Dpf-x9-lnH" customClass="ViewController4" customModule="AdventureStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WwT-E6-1o3"/>
+                        <viewControllerLayoutGuide type="bottom" id="EXd-DG-lN7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AIs-kE-T0U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opg-x9-hIt">
+                                <rect key="frame" x="270" y="495" width="61" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <connections>
+                                    <segue destination="6dD-Vh-eJb" kind="show" id="Bfu-lm-EEK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZI-oZ-Dkn">
+                                <rect key="frame" x="331" y="495" width="69" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onButton2Pressed:" destination="vh4-xj-axT" eventType="touchUpInside" id="hRK-ET-nL4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oru-Wh-6zX">
+                                <rect key="frame" x="200" y="495" width="71" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onButton1Pressed:" destination="vh4-xj-axT" eventType="touchUpInside" id="dll-al-LpC"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="parrtor" translatesAutoresizingMaskIntoConstraints="NO" id="NC9-cN-fVJ">
+                                <rect key="frame" x="200" y="161" width="200" height="153"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FR-PY-4HV">
+                                <rect key="frame" x="88" y="-44" width="425" height="197"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3FR-PY-4HV" firstAttribute="centerX" secondItem="AIs-kE-T0U" secondAttribute="centerX" id="Gwf-fR-EHf"/>
+                            <constraint firstItem="NC9-cN-fVJ" firstAttribute="centerX" secondItem="AIs-kE-T0U" secondAttribute="centerX" id="UhW-S0-1wx"/>
+                            <constraint firstItem="Opg-x9-hIt" firstAttribute="centerX" secondItem="AIs-kE-T0U" secondAttribute="centerX" id="gRW-fw-CzV"/>
+                            <constraint firstItem="oru-Wh-6zX" firstAttribute="centerX" secondItem="AIs-kE-T0U" secondAttribute="centerX" constant="-122.5" id="n3L-zQ-frc"/>
+                            <constraint firstItem="0ZI-oZ-Dkn" firstAttribute="centerX" secondItem="AIs-kE-T0U" secondAttribute="centerX" constant="98" id="yJ7-Px-7BT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="oru-Wh-6zX" id="vGg-e3-DSz"/>
+                        <outlet property="button2" destination="0ZI-oZ-Dkn" id="hWd-ys-MkH"/>
+                        <outlet property="image" destination="NC9-cN-fVJ" id="F5e-FU-pVA"/>
+                        <outlet property="label" destination="3FR-PY-4HV" id="491-DO-o7k"/>
+                        <outlet property="reset" destination="Opg-x9-hIt" id="9rD-wf-W0f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2w-Dy-1f3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3050" y="289"/>
+        </scene>
+        <!--View Controller5-->
+        <scene sceneID="XZO-EY-BHG">
+            <objects>
+                <viewController id="6dD-Vh-eJb" customClass="ViewController5" customModule="AdventureStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lj2-cE-NhK"/>
+                        <viewControllerLayoutGuide type="bottom" id="bW0-Uu-HUp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nxZ-Th-Up2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="End" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSo-hR-cvW">
+                                <rect key="frame" x="88" y="0.0" width="425" height="197"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MS-Xd-qEU">
+                                <rect key="frame" x="170" y="155" width="261" height="42"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSO-HP-lAe">
+                                <rect key="frame" x="170" y="199" width="261" height="42"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbO-6z-NOp">
+                                <rect key="frame" x="170" y="249" width="261" height="42"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JH-j8-YIL">
+                                <rect key="frame" x="170" y="299" width="261" height="42"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POh-2D-Mq1">
+                                <rect key="frame" x="170" y="349" width="261" height="42"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQO-Li-AQ9">
+                                <rect key="frame" x="170" y="404" width="261" height="42"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maH-d6-guX">
+                                <rect key="frame" x="170" y="454" width="261" height="42"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpQ-Eb-Lo4">
+                                <rect key="frame" x="190" y="504" width="220" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleShadowColor" red="1" green="0.0" blue="0.0092708704513446705" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onResetTapped:" destination="6dD-Vh-eJb" eventType="touchUpInside" id="MyT-lz-ShV"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="kdf-ii-5UC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="POh-2D-Mq1" firstAttribute="centerX" secondItem="nxZ-Th-Up2" secondAttribute="centerX" id="9VT-ys-XBN"/>
+                            <constraint firstItem="OpQ-Eb-Lo4" firstAttribute="centerX" secondItem="nxZ-Th-Up2" secondAttribute="centerX" id="QmM-3s-Xcw"/>
+                            <constraint firstItem="hSO-HP-lAe" firstAttribute="centerX" secondItem="nxZ-Th-Up2" secondAttribute="centerX" id="YNc-Kx-1LH"/>
+                            <constraint firstItem="8JH-j8-YIL" firstAttribute="centerX" secondItem="nxZ-Th-Up2" secondAttribute="centerX" id="b2I-qG-ami"/>
+                            <constraint firstItem="MSo-hR-cvW" firstAttribute="centerX" secondItem="nxZ-Th-Up2" secondAttribute="centerX" id="dGH-CC-UWM"/>
+                            <constraint firstItem="8MS-Xd-qEU" firstAttribute="centerX" secondItem="nxZ-Th-Up2" secondAttribute="centerX" id="dR7-Uw-tBq"/>
+                            <constraint firstItem="maH-d6-guX" firstAttribute="centerX" secondItem="nxZ-Th-Up2" secondAttribute="centerX" id="hA1-gQ-jpU"/>
+                            <constraint firstItem="FbO-6z-NOp" firstAttribute="centerX" secondItem="nxZ-Th-Up2" secondAttribute="centerX" id="qTc-oT-VJd"/>
+                            <constraint firstItem="FQO-Li-AQ9" firstAttribute="centerX" secondItem="nxZ-Th-Up2" secondAttribute="centerX" id="xyn-Zj-Pyj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="choice1" destination="hSO-HP-lAe" id="ZNO-Mc-AFV"/>
+                        <outlet property="choice2" destination="FbO-6z-NOp" id="0Os-Cu-fzp"/>
+                        <outlet property="choice3" destination="8JH-j8-YIL" id="Hpj-ZN-tdz"/>
+                        <outlet property="choice4" destination="POh-2D-Mq1" id="Meg-E2-9Lq"/>
+                        <outlet property="choice5" destination="FQO-Li-AQ9" id="Ucl-aQ-fj7"/>
+                        <outlet property="choice6" destination="maH-d6-guX" id="Q9F-a7-nR7"/>
+                        <outlet property="label" destination="MSo-hR-cvW" id="io6-yL-jCU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4up-6c-CaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3656" y="288"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="flower" width="128" height="128"/>
+        <image name="parrtor" width="200" height="200"/>
+        <image name="wer" width="200" height="100"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bfu-lm-EEK"/>
+        <segue reference="R2K-3T-r69"/>
+        <segue reference="okB-ir-47W"/>
+        <segue reference="hGD-Y8-2UO"/>
+        <segue reference="seB-6t-sww"/>
+    </inferredMetricsTieBreakers>
 </document>

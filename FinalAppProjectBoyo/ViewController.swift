@@ -9,17 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    
+    var choice = Choices()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        label.text = "When walking down the street, \n you come across the once thought \n extinct flower of legend "
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func onFightPressed(sender: AnyObject) { //on button tapped, set a choice to true
+        choice.didFight = true
+        choice.name = textField.text!
     }
-
-
+    @IBAction func onScreenTapped(sender: AnyObject) { //resign the keybord 
+        textField.resignFirstResponder()
+    }
+    
+    
+    @IBAction func onFleePressed(sender: AnyObject) {
+        choice.didFlee = true
+        choice.name = textField.text!
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let dvc = segue.destinationViewController as! ViewController1
+        dvc.choice = self.choice
+        
+    }
+    
 }
-
